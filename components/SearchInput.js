@@ -14,14 +14,11 @@ const SearchInput = ({
 );
 SearchInput.defaultProps = {
   label: 'Search:',
-  size: 300,
-  handleChange: () => {
-    console.warn('SearchInput: No change handler defined.')
-  },
-  handleSubmit: (e) => {
-    e.preventDefault();
-    console.warn('SearchInput: No submit handler defined.')
-  }
+  size: 300
+};
+SearchInput.propTypes = {
+  handleChange: React.PropTypes.func,
+  handleSubmit: React.PropTypes.fun
 };
 
 module.exports = SearchInput;
